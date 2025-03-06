@@ -16,8 +16,7 @@ def load_tasks():
 # Function to save tasks to the JSON file
 def save_tasks(tasks):
     with open(TODO_FILE, "w") as file:  # Open the file in write mode
-        json.dump(tasks, file, indent=4)  # Save tasks as formatted JSON
-
+        json.dump(tasks, file, indent=4)  # Save tasks as formatted JS
 
 @click.group()  # Define a Click command group (main CLI)
 def cli():
@@ -82,3 +81,5 @@ cli.add_command(remove)
 # If the script is run directly, start the CLI
 if __name__ == "__main__":
     cli()
+
+    
